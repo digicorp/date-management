@@ -1,0 +1,22 @@
+{
+  "name": "date-management",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashishvaghasiya-digicorp/date-management.git"
+  },
+  "keywords": [
+    "date"
+  ],
+  "author": "Ashish Vaghasiya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashishvaghasiya-digicorp/date-management/issues"
+  },
+  "homepage": "https://github.com/ashishvaghasiya-digicorp/date-management#readme"
+}

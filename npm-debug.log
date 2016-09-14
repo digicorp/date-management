@@ -1,0 +1,109 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'D:\\bin\\v6.2.1\\node.exe',
+1 verbose cli   'C:\\Users\\ashish.vaghasiya\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'publish' ]
+2 info using npm@3.10.5
+3 info using node@v6.2.1
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: 'E:\\NPM\\date-management',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory C:\Users\ashish.vaghasiya\AppData\Roaming\npm-cache\date-management\1.0.0\package.tgz not in flight; packing
+9 verbose correctMkdir C:\Users\ashish.vaghasiya\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+10 info lifecycle date-management@1.0.0~prepublish: date-management@1.0.0
+11 silly lifecycle date-management@1.0.0~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ 'C:\\Users\\ashish.vaghasiya\\AppData\\Roaming\\npm-cache\\date-management\\1.0.0\\package.tgz',
+12 verbose tar pack   'E:\\NPM\\date-management' ]
+13 verbose tarball C:\Users\ashish.vaghasiya\AppData\Roaming\npm-cache\date-management\1.0.0\package.tgz
+14 verbose folder E:\NPM\date-management
+15 verbose addLocalTarball adding from inside cache C:\Users\ashish.vaghasiya\AppData\Roaming\npm-cache\date-management\1.0.0\package.tgz
+16 verbose correctMkdir C:\Users\ashish.vaghasiya\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+17 silly cache afterAdd date-management@1.0.0
+18 verbose afterAdd C:\Users\ashish.vaghasiya\AppData\Roaming\npm-cache\date-management\1.0.0\package\package.json not in flight; writing
+19 verbose correctMkdir C:\Users\ashish.vaghasiya\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+20 verbose afterAdd C:\Users\ashish.vaghasiya\AppData\Roaming\npm-cache\date-management\1.0.0\package\package.json written
+21 silly publish { name: 'date-management',
+21 silly publish   version: '1.0.0',
+21 silly publish   description: '--- #### Author : Ashish Vaghasiya ##### Created on : 9th Nov 2015 --- ## constant',
+21 silly publish   main: 'index.js',
+21 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+21 silly publish   repository:
+21 silly publish    { type: 'git',
+21 silly publish      url: 'git+https://github.com/ashishvaghasiya-digicorp/date-management.git' },
+21 silly publish   keywords: [ 'date' ],
+21 silly publish   author: { name: 'Ashish Vaghasiya' },
+21 silly publish   license: 'ISC',
+21 silly publish   bugs: { url: 'https://github.com/ashishvaghasiya-digicorp/date-management/issues' },
+21 silly publish   homepage: 'https://github.com/ashishvaghasiya-digicorp/date-management#readme',
+21 silly publish   readme: '# Date Library\n---\n#### Author : Ashish Vaghasiya\n##### Created on : 9th Nov 2015\n---\n## constant\n\n\n- OperationType\n\t* Day\\_of\\_Week\n\t* Day\\_Number\\_of\\_Week\n\t* Absolute\\_DateTime\n\t* First\\_Date\n\t* Last\\_Date\n\t* Date\\_of\\_Weekday\\_in\\_Week\n\t* Date\\_of\\_Weekday\\_in\\_Month\\_for\\_Given\\_Week\n\t* Date\\_of\\_Weekday\\_in\\_Quarter\\_for\\_Given\\_Month\\_and_Week\n\t* Date\\_of\\_Weekday\\_in\\_Year\\_for\\_Given\\_Week\n\t* Date\\_of\\_Weekday\\_in\\_Year\\_for\\_Given\\_Month\\_and\\_Week\n\t* Date\\_of\\_Weekday\\_in\\_Year\\_for\\_Given\\_Quarter\\_and\\_Month\\_and\\_Week\n\t* Week\\_of\\_Year\n\t* Calendar\\_Week\\_of\\_Month\n\t* Week\\_of\\_Month\\_by\\_Days\\_Distribution\\_for\\_as\\_Weeks\n\n\t---\n\n- DOW (Date Of Week)\n\t* Sunday\n\t* Monday\n\t* Tuesday\n\t* Wednesday\n\t* Thursday\n\t* Friday\n\t* Saturday\n\n\t---\n\n- GranularityType\n\t* Seconds\n\t* Minutes\n\t* Hours\n\t* Days\n\t* Weeks\n\t* Months\n\t* Quarters\n\t* HalfYears\n\t* Years\n\n\n## functions\n- DateLibrary.getDayOfWeek(Date, {JSON Object})\n\n\t* _example1_\n\t\t- _Description_ : find Week Name from `15th June 2015`.\n\t\t```javascript\n\t\t\tDateLibrary.getDayOfWeek(new Date("2015-06-15"),\n\t\t\t\t{operationType:"Day_of_Week"}) // Output : Monday\n\t\t```\n\t\t- _Steps_\n\t\t\t- find day of week from given date[`Monday`]\t\t\t\n\n\t* _example2_\n\t\t- _Description_ :  if first day of week is `Sunday`, what day will be on `15th June 2015`.\n\t\t```javascript\n\t\t\tDateLibrary.getDayOfWeek(new Date("2015-06-15"),\n\t\t\t\t{operationType:"Day_Number_of_Week",\n\t\t\t\t\tstartDayOfWeek:"Sunday"}) // Output : 1\n\t\t```\n\t\t- _Steps_\n\t\t\t- find Week of given date (Sunday as Start day of week) [`14th May 2015` to `20th May 2015`]\n\t\t\t- Given Date follow in 2nd day [`1`]\n---\n- DateLibrary.getRelativeDate(Date, {JSON Object})\n\n\t* _example1_\n\t\t- _Description_ :  Subtract 13 `Days` From Given Date\n\t\t```javascript\n\t\t\tDateLibrary.getRelativeDate(new Date("2015-06-15 14:10:39"),\n\t\t\t\t{operationType: "Absolute_DateTime",\n\t\t\t\t\tgranularityType: "Days",value: -13}) // Output : Tue Jun 02 2015 14:10:39\n\t\t```\n\t\t- _Steps_\n\t\t\t- find Day from given date [`15`]\n\t\t\t- Subtract 13 Days from given date [`15-13`]\t\t\t\n\n\t* _example2_\n\t\t- _Description_ :  Subtract 13 `Hours` From Given Date\n\t\t```javascript\n\t\t\tDateLibrary.getRelativeDate(new Date("2015-06-15 14:10:39"),\n\t\t\t\t{operationType: "Absolute_DateTime",\n\t\t\t\t\tgranularityType: "Hours",value: -13}) // Output : Tue Jun 15 2015 01:10:39\n\t\t```\n\t\t- _Steps_\n\t\t\t- find Hours from given date [`14`]\n\t\t\t- Subtract 13 Hours from given date [`14-13`]\t\t\t\n\n\t* _example3_\n\t\t- _Description_ :  get First Day of `quarter` From Given Date\n\t\t```javascript\n\t\t\tDateLibrary.getRelativeDate(new Date("2015-06-15"),\n\t\t\t\t{operationType:"First_Date",granularityType:"Quarters"}) // Output : Wed Apr 01 2015 00:00:00\n\t\t```\n\t\t- _Steps_\n\t\t\t- find quarter for given date [`2nd Quarter`]\n\t\t\t- find first month of quarter [`Apr`]\t\t\t\t\t\t\n\n\t* _example4_\n\t\t- _Description_ :  get Last Day of `quarter` From Given Date\n\t\t```javascript\n\t\t\tDateLibrary.getRelativeDate(new Date("2015-06-15"),\n\t\t\t\t{operationType:"Last_Date",granularityType:"Quarters"}) // Output : Wed Jun 30 2015 23:59:59\n\t\t```\n\t\t- _Steps_\n\t\t\t- find quarter for given date [`2nd Quarter`]\n\t\t\t- find last month of quarter [`Jun`]\n\n\t* _example5_\n\t\t- _Description_ :  if first day of week is `Sunday`, what date will be on `Wednesday`, if given date is `15th June 2015`.\n\t\t```javascript\n\t\t\tDateLibrary.getRelativeDate(iDate,\n\t\t\t\t{operationType: "Date_of_Weekday_in_Week",\n\t\t\t\t\tstartDayOfWeek:"Sunday",returnDayOfWeek:"Wednesday"}) // Output : Wed Jun 17 2015 00:00:00\n\t\t```\n\t\t- _Steps_\n\t\t\t- find Week of given date (Sunday as Start day of week) [`14th May 2015` to `21st May 2015`]\n\t\t\t- Wednesday will be on [`17th May 2015`]\n\n\t* _example6_\n\t\t- _Description_ :  if first day of week is `Wednesday`, what date will be on `1st day of week`, if given date is `15th June 2015`.\n\t\t```javascript\n\t\t\tDateLibrary.getRelativeDate(new Date("2015-06-15"),\n\t\t\t\t{operationType:"Date_of_Weekday_in_Week",\n\t\t\t\t\tstartDayOfWeek:"Wednesday",returnDayNumberOfWeek:0}) // Output : Wed Jun 10 2015 00:00:00\t\t\t\n\t\t```\n\t\t- _Steps_\n\t\t\t- find Week of given date (Wednesday as Start day of week) [`10th May 2015` to `17th May 2015`]\n\t\t\t- 1st day of week should be [`10th May 2015`]\n\n\t* _example7_\n\t\t- _Description_ :  if first day of week is `Monday`, what date will be on `Friday` of `2nd Week` of `Month` containing `15th June 2015` as one of the date.\n\t\t```javascript\n\t\t\tDateLibrary.getRelativeDate(new Date("2015-06-15"),\n\t\t\t\t{operationType:"Date_of_Weekday_in_Month_for_Given_Week",\n\t\t\t\t\tstartDayOfWeek: "Monday",returnDayOfWeek:"Friday",WeekOfMonth:2}) // Output : Fri Jun 12 2015 00:00:00\n\t\t```\n\t\t- _Steps_\n\t\t\t- find month for given date [`Jun`]\n\t\t\t- find 2nd Week of month (Monday as Start day of week) [`8th May 2015` to `14th May 2015`]\n\t\t\t- Friday will be on [`12th May 2015`]\n\n\t* _example8_\n\t\t- _Description_ :  if first day of week is `Sunday`, what date will be `fourth day` of `3rd Week` of `Month` containing `15th June 2015` as one of the date.\n\t\t```javascript\n\t\t\tDateLibrary.getRelativeDate(new Date("2015-06-15"),\n\t\t\t\t{operationType: "Date_of_Weekday_in_Month_for_Given_Week",\n\t\t\t\t\tstartDayOfWeek:"Sunday",returnDayNumberOfWeek:3,WeekOfMonth:3}) // Output : Wed Jun 17 2015 00:00:00\n\t\t```\n\t\t- _Steps_\n\t\t\t- find month for given date [`Jun`]\n\t\t\t- find 2nd Week of month (Sunday as Start day of week) [`14th May 2015` to `20th May 2015`]\n\t\t\t- The date of fourth day of week should be [`17th May 2015`]\n\n\t* _example9_\n\t\t- _Description_ :  if first day of week is `Tuesday`, what date will be on `Friday` of `3rd week` of `2nd month` of `quarter` containing `15th June 2015` as one of the date.\n\t\t```javascript\n\t\t\tDateLibrary.getRelativeDate(new Date("2015-06-15"),\n\t\t\t\t{operationType:"Date_of_Weekday_in_Quarter_for_Given_Month_and_Week",\n\t\t\t\t\tstartDayOfWeek:"Tuesday",returnDayOfWeek:"Friday",MonthOfQuarter:2,WeekOfMonth:3}) // Output : 15th May 2015\n\t\t```\n\t\t- _Steps_\n\t\t\t- find quarter for given date [`2nd Quarter`]\n\t\t\t- find 2nd month of quarter [`May`]\n\t\t\t- find 3rd week of month (Tuesday as Start day of week) [`12th May 2015` to `18th May 2015`]\n\t\t\t- Friday will be on [`15th May 2015`]\n\n\t* _example10_\n\t\t- _Description_ :  if first day of week is `Tuesday`, what date will be on `Sunday` of `18th Week` of year containing `15th June 2015` as one of the date.\n\t\t```javascript\n\t\t\tDateLibrary.getRelativeDate(new Date("2015-06-15"),\n\t\t\t\t{operationType: "Date_of_Weekday_in_Year_for_Given_Week" ,\n\t\t\t\t\tstartDayOfWeek: "Tuesday", returnDayOfWeek:"Sunday", WeekOfYear:18}) // Output : 3rd May 2015\n\t\t```\n\t\t- _Steps_\t\t\t\n\t\t\t- find 18 week follow in which month [`May`]\n\t\t\t- find 18th week of year (Tuesday as Start day of week) [`28th Apr 2015` to `4th May 2015`]\n\t\t\t- Sunday will be on [`3rd May 2015`]\n\n\t* _example11_\n\t\t- _Description_ :  if first day of week is `Friday`, what date will be on `Tuesday` of `3rd Week` of `8th month` of year containing `15th June 2015` as one of the date.\n\t\t```javascript\n\t\t\tDateLibrary.getRelativeDate(new Date("2015-06-15"),\n\t\t\t\t{operationType:"Date_of_Weekday_in_Year_for_Given_Month_and_Week",\n\t\t\t\t\tstartDayOfWeek:"Friday", returnDayOfWeek:"Tuesday", WeekOfMonth:3, MonthOfYear:8}) // Output : 18th Aug 2015\n\t\t```\n\t\t- _Steps_\t\t\t\n\t\t\t- find 8th month in year [`Aug`]\n\t\t\t- find 3rd week of Month (Friday as Start day of week) [`14th Aug 2015` to `20th Aug 2015`]\n\t\t\t- Tuesday will be on [`18th Aug 2015`]\n\n\t* _example12_\n\t\t- _Description_ :  if first day of week is `Friday`, what date will be on `Tuesday` of `3rd Week` of `2nd month` of `3rd quarter` of year containing `15th June 2015` as one of the date.\n\t\t```javascript\n\t\t\tDateLibrary.getRelativeDate(new Date("2015-06-15"),\n\t\t\t\t{operationType: "Date_of_Weekday_in_Year_for_Given_Quarter_and_Month_and_Week",\n\t\t\t\t\tstartDayOfWeek:"Friday",returnDayOfWeek:"Tuesday", QuarterOfYear:3, MonthOfQuarter:2, WeekOfMonth:3}) // Output : 18th Aug 2015\n\t\t```\n\t\t- _Steps_\t\t\t\n\t\t\t- find 3rd quarter of year [`Jul` to `Sep`]\n\t\t\t- find 2nd month of quarter [`Aug`]\n\t\t\t- find 3rd week of month (Friday as Start day of week) [`14th Aug 2015` to `20th Aug 2015`]\n\t\t\t- Tuesday will be on [`18th Aug 2015`]\n\n---\n\n- DateLibrary.getWeekNumber(Date, {JSON Object})\n\n\t* _example1_\n\t\t- _Description_ :  if first day of week is `Tuesday`, what week number in year will be follow in `15th June 2015` as one of the date.\n\t\t```javascript\n\t\t\tDateLibrary.getWeekNumber(new Date("2015-06-15"),\n\t\t\t\t{operationType:"Week_of_Year",\n\t\t\t\t\tstartDayOfWeek:"Tuesday"}) // Output : 24\n\t\t```\n\t\t- _Steps_\n\t\t\t- find Previous month(s) week count (Tuesday as Start day of week)(`Jan+Feb+Mar+Apr+May`) [`5+4+5+4+4`]\n\t\t\t- find week count of given date month(`Jun`) [`2`]\n\t\t\t- total week count is [`5+4+5+4+4+2` = `24`]\n\n\t* _example2_\n\t\t- _Description_ :  if first day of week is `Tuesday`, what week number in month will be follow in `15th June 2015` as one of the date.\n\t\t```javascript\n\t\t\tDateLibrary.getWeekNumber(new Date("2015-06-15"),\n\t\t\t\t{operationType:"Calendar_Week_of_Month",\n\t\t\t\t\tstartDayOfWeek: "Tuesday"}) // Output : 3\n\t\t```\n\t\t- _Steps_\t\t\t\n\t\t\t- find week count of given date month(Tuesday as Start day of week) [`3`]\n\t\t\t- total week count is [`3`]\n\n\t* _example3_\n\t\t- _Description_ :  what week number in month by days distribution will be follow in `15th June 2015` as one of the date.\n\t\t```javascript\n\t\t\tDateLibrary.getWeekNumber(new Date("2015-06-15"),\n\t\t\t\t{operationType:"Week_of_Month_by_Days_Distribution_for_as_Weeks",\n\t\t\t\t\t"28days":[5,6,5,6,6],"29days":[5,6,6,6,6],"30days":[6,6,6,6,6],"31days":[5,5,5,5,5,6]}) // Output : 3\n\t\t```\n\t\t- _Steps_\t\t\t\n\t\t\t- find total days in month [`30`]\n\t\t\t- find week count given date follow in which week [`6+6+6`=`18`]\n\t\t\t- total week count is [`3`]\n\n\n- DateLibrary.getDateDifference(fromDate,toDate,{JSON Object})\n\n\t* _example1_\n\t\t- _Description_ :  This takes three arguments from Date, to Date and JSON Object .It returns difference between them(base on granularityType days).\n\t\t```javascript\n\t\t\tDateLibrary.getDateDifference(new Date("2016-04-01"),new Date("2016-04-16"),\n\t\t\t\t{granularityType: "days"}) //output 15\n\t\t```\n\n\t* _example2_\n\t\t- _Description_ :  This takes three arguments from Date , to Date and JSON Object .It returns difference between them(base on granularityType seconds).\n\t\t```javascript\n\t\t\tDateLibrary.getDateDifference(new Date("2016-04-01 12:30:59"),new Date("2016-04-16 15:45:59"),\n\t\t\t\t{granularityType: "seconds"}) //output 1307700\n\t\t```\n\n\n- DateLibrary.getDifferenceInDays(fromDate,toDate,[array of excluded Date Object],[array of excluded days])\n\n\t* _example1_\n\t\t- _Description_ :  This takes two arguments from Date and to Date.It returns difference between them.\n\t\t```javascript\n\t\t\tDateLibrary.getDifferenceInDays(new Date("2016-04-01"),new Date("2016-04-16"))//output 15\n\t\t```\n\n\t* _example2_\n\t\t- _Description_ :  This takes four arguments from Date, to Date and array of dates to be excluded and empty array exclude days.It returns difference between them.\n\t\t```javascript\n\t\t\tDateLibrary.getDifferenceInDays(new Date("2016-04-01"),new Date("2016-04-16"),\n\t\t\t\t[new Date("2016-04-05"),new Date("2016-04-06")],[])//output 13\n\t\t```\n\n\t* _example3_\n \t - _Description_ :  This takes four arguments from Date, to Date and array of dates to be excluded and array of days to be excluded.It returns difference between them.\n \t ```javascript\n \t\t DateLibrary.getDifferenceInDays(new Date("2016-04-01"),new Date("2016-04-16"),\n\t\t \t[new Date("2016-04-05"),new Date("2016-04-06")],["friday"])//output 10\n \t ```\n\n- DateLibrary.getNumberToTimeStr(timeString, {JSON Object})\n\n\t* _example1_\n\t\t- _Description_ :  This takes two arguments timeString and JSON Object. It returns time.\n\t\t```javascript\n\t\t\tDateLibrary.getNumberToTimeStr("345", {delimiter: ":"}) //output 00:03:45\n\t\t```\n\n\t* _example2_\n\t\t- _Description_ :  This takes two arguments timeString and JSON Object. It returns time.\n\t\t```javascript\n\t\t\t\tDateLibrary.getNumberToTimeStr("5", {delimiter: "-"}) //output 00-00-05\n\t```\n\t* _example3_\n\t\t- _Description_ :  This takes two arguments timeString and JSON Object. It returns time.\n\t\t```javascript\n\t\t\t\tDateLibrary.getNumberToTimeStr("145635", {delimiter: "~"}) //output 14~56~35\n\t\t```\n\n- DateLibrary.julianToDate(julianString, timeString)\n\n \t* _example1_\n \t\t- _Description_ :  This takes two arguments julianString and timeString (optional). It returns date object.\n \t\t```javascript\n \t\t\t  DateLibrary.julianToDate("102536") //output Fri Jun 20 2003 00:00:00\n \t\t```\n \t* _example2_\n\t \t- _Description_ :  This takes two arguments timeString and JSON Object. It returns time.\n\t \t```javascript\n\t \t\t\tDateLibrary.julianToDate("115536","152645") //output Sun Jun 19 2016 15:26:45\n\t \t```\n',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   _id: 'date-management@1.0.0',
+21 silly publish   _shasum: '5aed079d1fb2edfae650d2b2405e2edec13dbfe8',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name date-management
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry http://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'date-management',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   escapedName: 'date-management',
+26 silly mapToRegistry   name: 'date-management',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri http://registry.npmjs.org/date-management
+28 verbose publish registryBase http://registry.npmjs.org/
+29 silly publish uploading C:\Users\ashish.vaghasiya\AppData\Roaming\npm-cache\date-management\1.0.0\package.tgz
+30 verbose request uri http://registry.npmjs.org/date-management
+31 verbose request sending authorization for write operation
+32 info attempt registry request try #1 at 12:11:19 PM
+33 verbose request using bearer token for auth
+34 verbose request id cc04b87273ae7cdf
+35 http request PUT http://registry.npmjs.org/date-management
+36 http 403 http://registry.npmjs.org/date-management
+37 verbose headers { 'content-type': 'application/json',
+37 verbose headers   'cache-control': 'max-age=300',
+37 verbose headers   'content-length': '95',
+37 verbose headers   'accept-ranges': 'bytes',
+37 verbose headers   date: 'Wed, 14 Sep 2016 06:40:54 GMT',
+37 verbose headers   via: '1.1 varnish',
+37 verbose headers   'x-served-by': 'cache-sin6921-SIN',
+37 verbose headers   'x-cache': 'MISS, MISS from gateway.digi-corp.com',
+37 verbose headers   'x-cache-hits': '0',
+37 verbose headers   'x-timer': 'S1473835253.026485,VS0,VE1085',
+37 verbose headers   vary: 'Accept-Encoding',
+37 verbose headers   'x-cache-lookup': 'MISS from gateway.digi-corp.com:8080',
+37 verbose headers   connection: 'keep-alive' }
+38 verbose request invalidating C:\Users\ashish.vaghasiya\AppData\Roaming\npm-cache\registry.npmjs.org\date-management on PUT
+39 error publish Failed PUT 403
+40 verbose stack Error: "You cannot publish over the previously published version 1.0.0." : date-management
+40 verbose stack     at makeError (C:\Users\ashish.vaghasiya\AppData\Roaming\npm\node_modules\npm\node_modules\npm-registry-client\lib\request.js:264:12)
+40 verbose stack     at CachingRegistryClient.<anonymous> (C:\Users\ashish.vaghasiya\AppData\Roaming\npm\node_modules\npm\node_modules\npm-registry-client\lib\request.js:252:14)
+40 verbose stack     at Request._callback (C:\Users\ashish.vaghasiya\AppData\Roaming\npm\node_modules\npm\node_modules\npm-registry-client\lib\request.js:172:14)
+40 verbose stack     at Request.self.callback (C:\Users\ashish.vaghasiya\AppData\Roaming\npm\node_modules\npm\node_modules\request\request.js:200:22)
+40 verbose stack     at emitTwo (events.js:106:13)
+40 verbose stack     at Request.emit (events.js:191:7)
+40 verbose stack     at Request.<anonymous> (C:\Users\ashish.vaghasiya\AppData\Roaming\npm\node_modules\npm\node_modules\request\request.js:1067:10)
+40 verbose stack     at emitOne (events.js:101:20)
+40 verbose stack     at Request.emit (events.js:188:7)
+40 verbose stack     at IncomingMessage.<anonymous> (C:\Users\ashish.vaghasiya\AppData\Roaming\npm\node_modules\npm\node_modules\request\request.js:988:12)
+41 verbose statusCode 403
+42 verbose pkgid date-management
+43 verbose cwd E:\NPM\date-management
+44 error Windows_NT 6.1.7601
+45 error argv "D:\\bin\\v6.2.1\\node.exe" "C:\\Users\\ashish.vaghasiya\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js" "publish"
+46 error node v6.2.1
+47 error npm  v3.10.5
+48 error code E403
+49 error "You cannot publish over the previously published version 1.0.0." : date-management
+50 error If you need help, you may report this error at:
+50 error     <https://github.com/npm/npm/issues>
+51 verbose exit [ 1, true ]
